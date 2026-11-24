@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10243a"><meta name="description" content="VIGÍA C-UAS V7: observación visual y registro local">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./styles.css"><title>VIGÍA C-UAS V7</title>
+</head>
+<body>
+<header><div><h1>VIGÍA C-UAS</h1><p>Versión 7 · Observación y registro</p></div><span id="status" class="pill">INICIANDO</span></header>
+<main>
+<section class="panel"><h2>Panel de vigilancia</h2><div class="stats">
+<div><b id="count">0</b><small>Eventos guardados</small></div><div><b id="today">0</b><small>Eventos de hoy</small></div><div><b id="last">—</b><small>Último evento</small></div>
+</div></section>
+<section class="panel"><h2>Cámara</h2><video id="video" autoplay muted playsinline></video><div class="buttons"><button id="start">Activar cámara</button><button id="capture">Guardar foto</button><button id="stop" class="secondary">Detener</button></div><p class="hint">La cámara solo permite observación visual. No identifica ni confirma drones.</p></section>
+<section class="panel"><h2>Movimiento experimental</h2><p id="motionState">Detección desactivada.</p><div class="buttons"><button id="motion">Activar detección</button><button id="test" class="secondary">Registrar evento manual</button></div><label class="switch"><input type="checkbox" id="sound"> Alerta sonora</label><p class="hint">Puede alertar por personas, aves, vehículos, sombras, cambios de luz o movimiento del teléfono.</p></section>
+<section class="panel"><h2>Ubicación y mapa</h2><p id="gps">Ubicación no consultada.</p><div class="buttons"><button id="locate">Obtener GPS</button><button id="map" class="secondary">Abrir mapa</button></div><p class="hint">El mapa se abre en OpenStreetMap cuando hay coordenadas. La ubicación se solicita solo al pulsar el botón.</p></section>
+<section class="panel"><h2>Historial de eventos</h2><div class="buttons"><button id="export">Exportar evidencias JSON</button><button id="clear" class="danger">Borrar historial</button></div><div id="history"></div></section>
+<footer>VIGÍA V7 · Los datos se guardan en este dispositivo. Exporta tus evidencias antes de borrar datos del navegador.</footer>
+</main><script src="./app.js"></script>
+</body></html>
